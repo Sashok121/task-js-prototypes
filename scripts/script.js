@@ -15,7 +15,7 @@
 				if(nameMonstr.head > 0)
 					console.log(nameMonstr.name, " head is ", nameMonstr.head);
 				else
-					console.log("You killed ", nameMonstr.name);				
+					console.log("You killed ", nameMonstr.name);
 			}
 			else
 				console.log(nameMonstr.name, " is dead");
@@ -63,12 +63,12 @@
 	catMonstrs4.__proto__ = catMonstrs;
 	//-----------------------------------
 	var  birdMonstrs1 = {
-		name : " birdMonstrs1"
+		name : "birdMonstrs1"
 	};
 	 birdMonstrs1.__proto__ =  birdMonstrs;
 	 //-----------------------------------
 	var  birdMonstrs2 = {
-		name : " birdMonstrs2"
+		name : "birdMonstrs2"
 	};
 	 birdMonstrs2.__proto__ =  birdMonstrs;
 	 //-----------------------------------
