@@ -31,6 +31,7 @@
 			}
 		};	
 	catMonstrs.__proto__ = monstrs;
+
 	//Создание обьекта Птицемонстров
 	var birdMonstrs = {
 		level : 60,
@@ -73,12 +74,12 @@
 	 birdMonstrs2.__proto__ =  birdMonstrs;
 	 //-----------------------------------
 	var  birdMonstrs3 = {
-		name : " birdMonstrs1"
+		name : " birdMonstrs3"
 	};
 	 birdMonstrs3.__proto__ =  birdMonstrs;
 	 //-----------------------------------
 	var  birdMonstrs4 = {
-		name : " birdMonstrs1"
+		name : " birdMonstrs4"
 	};
 	 birdMonstrs4.__proto__ =  birdMonstrs;
 		
