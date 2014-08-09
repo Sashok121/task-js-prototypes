@@ -3,22 +3,22 @@
 	var monstrs = {
 		name : "",
 		level : "",
-		head : this.level,
+		head : "",
 		sayName : function(){
-			console.log("My name is ",this.name);
+			console.log("My name is ", this.name);
 		},
-		shut : function(nameMonstr,shutName){
+		shut : function(nameMonstr, shutName){
 			console.log("------------------------------------------------------------------");
-			console.log(this.name," ",shutName," ",nameMonstr.name);
-			if((nameMonstr.head)>0){
-				nameMonstr.head -=this.uron;
-				if(nameMonstr.head>0)
-					console.log(nameMonstr.name," head is ",nameMonstr.head);
+			console.log(this.name, " ", shutName, " ", nameMonstr.name);
+			if((nameMonstr.head) > 0){
+				nameMonstr.head -= this.uron;
+				if(nameMonstr.head > 0)
+					console.log(nameMonstr.name, " head is ", nameMonstr.head);
 				else
-					console.log("You killed ",nameMonstr.name);				
+					console.log("You killed ", nameMonstr.name);				
 			}
 			else
-				console.log(nameMonstr.name," is dead");
+				console.log(nameMonstr.name, " is dead");
 		}
 	};
 	//Создание Котомонстров
@@ -97,6 +97,6 @@
 	catMonstrs1.scratch(catMonstrs4);
 	catMonstrs2.scratch(catMonstrs4);
 	
-	console.log(catMonstrs1.head," ",catMonstrs2.head," ",catMonstrs3.head," ",catMonstrs4.head);
+	console.log(catMonstrs1.head, " ", catMonstrs2.head, " ", catMonstrs3.head, " ", catMonstrs4.head);
 	birdMonstrs3.sayName();
 }());
