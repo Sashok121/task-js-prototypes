@@ -1,9 +1,9 @@
 (function(){
 	// Создание обьекта Монстры
-	var monstrs = {
-		name : "",
-		level : "",
-		head : "",
+	var Monstrs = {
+        name: "",
+        head: "",
+        uron:"",
 		sayName : function(){
 			console.log("My name is ", this.name);
 		},
@@ -20,68 +20,49 @@
 			else
 				console.log(nameMonstr.name, " is dead");
 		}
-	};
-	//Создание Котомонстров
-	var catMonstrs = {
-		level : 50,
-		head : 50,
-		uron : 5,
-		scratch : function(nameMonstr){
+    };
+    
+  
+	var catMonstrs = function(obj){
+		this.name = obj.name || "";
+		this.level = 50;
+		this.head = 50;
+		this.uron = 5;
+		this.scratch = function(nameMonstr){
 			this.shut(nameMonstr, "scratch");
-			}
+			};
 		};	
-	catMonstrs.__proto__ = monstrs;
+	catMonstrs.prototype = Monstrs;	
 
 	//Создание обьекта Птицемонстров
-	var birdMonstrs = {
-		level : 60,
-		head : 60,
-		uron : 3,
-		bite : function(nameMonstr){
+	var birdMonstrs = function(obj){
+		this.name = obj.name || "";
+		this.level =60;
+		this.head = 60;
+		this.uron = 3;
+		this.bite = function(nameMonstr){
 			this.shut(nameMonstr, "bite");
 			}
 		};	
-	birdMonstrs.__proto__ = monstrs;
+	birdMonstrs.prototype = Monstrs;
 	//-----------------------------------
-	var catMonstrs1 = {
-		name : "catMonstrs1"
-	};
-	catMonstrs1.__proto__ = catMonstrs;
+	var catMonstrs1 = new catMonstrs({name:"catMonstrs1"});
+	
 	//-----------------------------------
-	var catMonstrs2 = {
-		name : "catMonstrs2"
-	};
-	catMonstrs2.__proto__ = catMonstrs;
+	var catMonstrs2 = new catMonstrs({name:"catMonstrs2"});
+	
 	//-----------------------------------
-	var catMonstrs3 = {
-		name : "catMonstrs3"
-	};
-	catMonstrs3.__proto__ = catMonstrs;
+	var catMonstrs3 = new catMonstrs({name:"catMonstrs3"});
 	//-----------------------------------
-	var catMonstrs4 = {
-		name : "catMonst"
-	};
-	catMonstrs4.__proto__ = catMonstrs;
+	var catMonstrs4 = new catMonstrs({name:"catMonstrs4"});
 	//-----------------------------------
-	var  birdMonstrs1 = {
-		name : "birdMonstrs1"
-	};
-	 birdMonstrs1.__proto__ =  birdMonstrs;
+	var  birdMonstrs1 = new birdMonstrs({name:"birdMonstrs1"});
 	 //-----------------------------------
-	var  birdMonstrs2 = {
-		name : "birdMonstrs2"
-	};
-	 birdMonstrs2.__proto__ =  birdMonstrs;
+	var  birdMonstrs2 = new birdMonstrs({name:"birdMonstrs2"});
 	 //-----------------------------------
-	var  birdMonstrs3 = {
-		name : " birdMonstrs3"
-	};
-	 birdMonstrs3.__proto__ =  birdMonstrs;
+	var  birdMonstrs3 = new birdMonstrs({name:"birdMonstrs3"});
 	 //-----------------------------------
-	var  birdMonstrs4 = {
-		name : " birdMonstrs4"
-	};
-	 birdMonstrs4.__proto__ =  birdMonstrs;
+	var  birdMonstrs4 = new birdMonstrs({name:"birdMonstrs4"});
 		
 	catMonstrs1.scratch(catMonstrs4);
 	catMonstrs2.scratch(catMonstrs4);
@@ -98,6 +79,6 @@
 	catMonstrs1.scratch(catMonstrs4);
 	catMonstrs2.scratch(catMonstrs4);
 	
-	console.log(catMonstrs1.head, " ", catMonstrs2.head, " ", catMonstrs3.head, " ", catMonstrs4.head);
+	
 	birdMonstrs3.sayName();
 }());
